@@ -1,0 +1,32 @@
+/* BlogList.css */
+.blog-list {
+  padding: var(--space-lg) 0;
+}
+.blog-list__grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.blog-list__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem; /* espaço uniforme entre os cards */
+}
+.blog-list__load-more-wrapper {
+  text-align: center;
+  margin-top: var(--space-lg);
+}
+.blog-list__load-more-btn {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+.blog-list__load-more-btn:hover {
+  background: var(--color-accent);
+  transform: translateY(-2px);
+}

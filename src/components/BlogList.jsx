@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import BlogCard from "./BlogCard";
+import "../styles/BlogList.css";
 
 export default function BlogList() {
   const [posts, setPosts] = useState([]);
@@ -47,8 +48,8 @@ export default function BlogList() {
   }
 
   return (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+    <div className="blog-list">
+      <div className="blog-list__grid">
         {posts.map((post) => (
           <BlogCard key={post.id} postData={post} />
         ))}
@@ -56,8 +57,8 @@ export default function BlogList() {
 
       {/* Botão Carregar Mais */}
       {page < totalPages && !loading && (
-        <div className="text-center">
-          <button onClick={loadMorePosts} variant="outline" size="lg">
+        <div className="blog-list__load-more-wrapper">
+          <button className="blog-list__load-more-btn" onClick={loadMorePosts}>
             Carregar mais posts
           </button>
         </div>
